@@ -1,0 +1,33 @@
+<div class="card float-right col-12 p-0 bigger-box">
+    <div class="card-body d-flex flex-column">
+      <h4 class="subtitle"></h4>
+      <div class="form-group row">
+        <label for="assignmentName" class="col-6 col-sm-3 col-form-label">Assignment Name:</label>
+        <input type="text" class="form-control col-4" id="assignmentName" value="{{ submission.assignmentName }}" disabled>
+      </div>
+      <div class="form-group row">
+        <label for="organization" class="col-6 col-sm-3">Organization/Team:</label>
+        <input type="text" class="form-control col-4" id="organization" value="{{ submission.organization }}" disabled>
+      </div>
+      <div class="form-group row">
+        <label for="mentor" class="col-6 col-sm-3 col-form-label">Mentor:</label>
+        <input type="text" class="form-control col-4" id="mentor" value="{{ submission.mentor }}" disabled>
+      </div>
+      <div class="form-group row">
+        <label for="travel" class="col-6 col-sm-3 col-form-label">Amount of travel:</label>
+        <input type="text" class="form-control col-4" id="travel" value="{{ submission.travel }}" disabled>
+      </div>
+      <div class="form-group row">
+        <label for="location" class="col-sm-3 col-form-label">Location:</label>
+        <input type="text" class="form-control col-4" id="location" value="{{ submission.location }}" disabled>
+      </div>
+      <div class="form-group row">
+        <label for="subFunctional" class="col-sm-3 col-form-label">Sub-Functional:</label><br>
+        <input type="text" class="form-control col-4" id="subFunctional" value="{{ submission.subFunctional }}" disabled>
+      </div>
+      <div class="form-group row height-30">
+        <label for="description" class="col-sm-3 col-form-label">Description:</label><br>
+        <textarea class="form-control col-12 col-md-6" name="description" id="description" disabled>{{ submission.description }}</textarea>
+      </div>
+    </div>
+  </div>

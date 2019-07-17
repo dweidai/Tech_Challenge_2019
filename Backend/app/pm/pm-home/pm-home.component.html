@@ -1,0 +1,102 @@
+<div>
+  <!-- Header -->
+  <app-pm-header></app-pm-header>
+
+  <div class='content'>
+    <!-- Title -->
+    <div class='title'>Home</div>
+
+    <div class='boxes'>
+
+      <div class='left-box' style='overflow-y: scroll'>
+        <div class='subHeader'>
+          <button class="tabLink" (click)="openTab('first',0)">1st Rotation</button>
+          <button class="tabLink" (click)="openTab('second',1)">2nd Rotation</button>
+          <button class="tabLink" (click)="openTab('third',2)">3rd Rotation</button>
+          <button class="tabLink" (click)="openTab('fourth',3)">4th Rotation</button>
+        </div>
+
+
+        <div id='first' class='tabContent'>
+
+          <ul class='list'>
+            <div style='display:inline-flex;width: 40%'>
+              <li><img src='../../../assets/images/LEAD-Home-Picture.png' style='height:150px'></li>
+            </div>
+            <div style='display:inline-block;width:45%;'>
+              <li style='font-weight:600'>{{ current.name }}</li>
+              <li>{{ current.rolename }}</li>
+              <li>{{ current.startdate }}</li>
+              <li>{{ current.enddate }}</li>
+            </div>
+
+
+
+          </ul>
+          <form>
+            <div class="form-group row">
+              <label for="description" class="col-sm-3 col-form-label">Description:</label>
+              <div class="col-sm-9">
+                <textarea class="form-control col-12 col-md-11" rows='9' name="description" id="description"
+                  value='{{ current.description }}' disabled></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="updates" class="col-sm-3 col-form-label">Updates:</label>
+              <div class="col-sm-9">
+                <textarea class="form-control col-12 col-md-11" name="updates" id="updates" value='{{ current.updatefield }}'
+                  rows='8' disabled></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+
+
+      </div>
+
+      <div class='right-top-box' style='overflow-y: scroll'>
+        <h4 class='subTitle'> To-Do List</h4>
+        <!-- List all to do items -->
+        <div class="form-group form-check" *ngFor="let item of toDoItems">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label">{{ item }}</label>
+        </div>
+        <!-- Add a to-do item -->
+        <div class="form-group row">
+          <label for="todoInput" class="col-sm-1 col-form-label">
+            <img src='../../../assets/images/PLus.png' style='height: 25px;width:20px'>
+          </label>
+          <div class="col-sm-9">
+            <input class="form-control input-sm" id="todoInput">
+          </div>
+        </div>
+        <button style='float:right' type="button" (click)="save_todo_item()"
+          class="btn btn-outline-secondary">Save</button>
+
+
+      </div>
+
+      <div class='right-top-box'>
+        <h4 class='subTitle'> Timeline</h4>
+
+        <!-- Shows all timeline items -->
+        <div class="form-group form-check" *ngFor="let item of timeline">
+          <label class="form-check-label">{{ item }}</label>
+        </div>
+      </div>
+
+      <!-- Shows all to do items -->
+      <div class='right-bottom-box'>
+
+
+        <div class="form-group">
+          <label class='subTitle' for="feedback">Feedback:</label>
+          <textarea class="form-control" id="feedback" rows="9" placeholder="Write a note to your BPM"></textarea>
+        </div>
+        <button style='float:right' type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+
+  </div>

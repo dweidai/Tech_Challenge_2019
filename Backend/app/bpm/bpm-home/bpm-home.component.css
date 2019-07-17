@@ -1,0 +1,113 @@
+
+/*CSS for all text */
+.title {
+    margin: 1.5%;
+    margin-left: 2.96875%;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 300px;
+}
+
+.subTitle {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight:400;
+}
+
+.text {
+    font-size:15px;
+}
+
+/* CSS for left box (viewing program members for each rotation */
+.subHeader {
+    align-content: center;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.tabLink {
+    display: inline-block;
+    text-decoration: none;
+    border:none;
+    font-size: 15px;
+    font-weight: 250px;
+    color: black;
+    cursor:pointer;
+    padding: 6px;
+}
+
+.tabLink:focus {
+    border: none;
+    outline:0;
+}
+.description{
+    display: block;
+}
+
+.list {
+    list-style-type: none;
+    border: 0 none;
+    padding-left: 25px;
+}
+
+.pm {
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+<<<<<<< HEAD
+
+.pm:hover {
+    cursor:pointer;
+    background-color: #E7ECF4;
+}
+
+
+=======
+>>>>>>> master
+/* CSS for placing and sizing of all the boxes */
+.boxes {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    padding: 2.96875%;
+    padding-top: 0%;
+}
+
+.left-box {
+    display: inline-block;
+    height: 100%;
+    width: 35%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #C7D4DD;
+}
+
+ .right-top-box {
+    padding: 15px;
+    vertical-align: top;
+    display: inline-block;
+    height: 35%;
+    width: 30.5%;
+    margin-left: 1.875%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #C7D4DD;
+}
+
+.right-bottom-box {
+    padding: 15px;
+    background-color: #FFFFFF;
+    position: absolute;
+    height: 56%;
+    width: 59.5%;
+    bottom: 0%;
+    right: 0%;
+    margin-top: 1.875%;
+    margin-bottom: 2.96875%;
+    margin-right: 2.96875%;
+    border-radius: 8px;
+    border: 1px solid #C7D4DD;
+}

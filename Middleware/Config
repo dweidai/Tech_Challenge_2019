@@ -1,0 +1,8 @@
+
+	static String PUBLIC_DNS = "team2-db.clycp9fxciou.us-east-1.rds.amazonaws.com";
+	static String PORT = ":"+ Integer.toString(port) +"/";
+	static String DATABASE_NAME = "team2db";
+	static String NO_Warning = "?useSSL=false";
+	static String url = "jdbc:mysql://" + PUBLIC_DNS + PORT + DATABASE_NAME + NO_Warning;
+	static String root = "team2";
+	static String password = "team2Password";

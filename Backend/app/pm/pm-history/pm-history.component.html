@@ -1,0 +1,74 @@
+<div>
+
+  <!-- Header -->
+  <app-pm-header></app-pm-header>
+
+  <!-- Header -->
+
+  <div class='content'>
+    <!-- Title -->
+    <div class='title'>History</div>
+
+    <div class='box'>
+      <!-- Header-->
+      <div class='subHeader'>
+        <button class="tabLink" style = 'color:#508BE4;border-bottom:3px solid #508BE4' (click)="openTab(0)">1st Rotation</button>
+        <button class="tabLink" (click)="openTab(1)">2nd Rotation</button>
+        <button class="tabLink" (click)="openTab(2)">3rd Rotation</button>
+        <button class="tabLink" (click)="openTab(3)">4th Rotation</button>
+      </div>
+
+      <div class='tabContent' style='padding: 0px;'>
+        <!--Add Picture-->
+
+        <div class="description">
+          <!-- Left side of profile -->
+       
+
+         
+          <div class = 'left'>
+          <div>
+            <img style='padding-bottom: 50px' src='../../../assets/images/LEAD-History-Picture.png'>
+          </div>
+          <ul class='list'>
+
+
+            <div style='display:inline-block;width:100%'>
+              <li><span style = 'font-weight: 700'>AL:</span> {{ currentRotation.name }}</li>
+              <li><span style = 'font-weight: 700'>Role:</span> {{ currentRotation.rolename }}</li>
+              <li><span style = 'font-weight: 700'>Start Date: </span>{{ currentRotation.startdate }}</li>
+              <li><span style = 'font-weight: 700'>End Date:</span>  {{ currentRotation.enddate }}</li>
+            </div>
+
+          </ul>
+</div>
+          <!-- Right side of profile-->
+          <div class = 'right'style = 'display:inline-block'>
+             
+             <form style = 'width: 100%'>
+                  <div class="form-group row">
+                    <label for="description" class="col-sm-3 col-form-label">Initial Description:</label>
+                    <div style = 'width:100%'>
+                      <textarea class="form-control" style = 'width:100%' rows='7' name="description" id="description"
+                        value='{{ currentRotation.description }}' disabled></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="updates" class="col-sm-3 col-form-label">Updates:</label>
+                    <div style = 'width:100%'>
+                      <textarea class="form-control" name="updates" id="updates" value='{{ currentRotation.updatefield }}'
+                        rows='6' ></textarea>
+                    </div>
+                  </div>
+                </form>  
+            
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+</div>

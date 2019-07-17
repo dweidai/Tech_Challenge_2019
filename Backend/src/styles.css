@@ -1,0 +1,16 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: linear-gradient(-90deg,#F8FAFC, #E7ECF4);
+    background-color:#E7ECF4;
+}
+
+.btn-ge-blue {
+  background-color: #508BE4;
+}
+
+.btn-ge-outline-blue {
+  border-color: #508BE4;
+  color: #508BE4;
+}

@@ -1,0 +1,39 @@
+.card-body {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-self:center;
+    border: 2px solid lightgray;
+    display: block;
+    position:absolute;
+    top:15%;
+    left:35%;
+    height: 74%;
+    width: 30%;
+    background-color: white;
+    border-radius: 1%;
+}
+
+#images {
+    display: block;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.mycustombtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-self:center;
+}
+
+input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top:20px;
+    width: 70%;
+}

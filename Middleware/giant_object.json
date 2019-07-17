@@ -1,0 +1,65 @@
+{
+  "_comment1": "This is a giant JSON Object that we will use to transfer information between the front end and the middle ware",
+  
+  "_comment2": "The following are corresponding USER object in JAVA",
+  
+  "_comment3": "PM",
+  "type": "AL/PM/BPM",
+  "sso": "212753189",
+  "password": "mypassword",
+  "firstname": "John",
+  "lastname": "Senorita",
+  "track": "IT",
+  "email": "John.Senorita@ge.com",
+  "todolist":[ "6/22 Day of Code", "6/23 Nike's Birthday", "7/1 Play Chess" ],
+  "action" : ["Day of Code", "Nick's Birthday", "Play Chess"],
+  "intend": ["Fun", "Business", "Family"],
+  "deadline": ["6/22", "6/23", "7/1"],
+  "university": "Monsters University",
+  "major" : "Computer Science w/ focus in Web Assembly",
+  "hiredate": "YYYY-MM-DD",
+  "feedback": "I think, um, this, um, is kinda, you know, right. that's about it",
+  "timeline": ["7/3 Work our", "7/4 Get Really Drunk", "7/5 Work Hard on TC"],
+  
+  "_comment4": "BPM / AL",
+  "title": "Senior Canadian Goose Manager",
+  "memberlist": ["205712314", "257316419", "213051499", "203110253"],
+  "joblist": ["RID JobID //reference kind", "Line Drawer", "Game Changer", "Big Yoshi"],
+  "note": "This is added later",
+  
+  "_comment5":"The following are corresponding to SURVEY object in JAVA",
+  
+  "_comment6":"AL_Survery / Member_Survey",
+  "question1":"What is your favorite kind of hummus?",
+  "question2":"Do you love yellow rubber duck?",
+  "question3":"Who is your favorite LEAD IT intern?",
+  "department": "Skip-Ball",
+  "member": "200315421",
+  
+  "_comment7":"The folowing are corresponding to PREFERENCE object in JAVA",
+  "reason":"I am just sitting there",
+  "notes":"This person is really dumb like Dave",
+  
+  "_comment8": "The following are corresponding JOB object in JAVA",
+  
+  "startdate": "YYYY-MM-DD",
+  "enddate": "YYYY-MM-DD",
+  "rolename": "Just Sitting There",
+  "description": "Just Sitting There",
+  "updatefield": "Can you go to google and type in BIG YOSHI?",
+  "location": "Erie",
+  "ALfeedback": "John is a hardly working worker",
+  "AL":"203115897",
+  
+  "_comment9": "The following are corresponding ROTATION object in JAVA",
+  
+  "past_experience": "None",
+  "mentor": "myself",
+  "coleader": "Josh",
+  "travel": "A lot",
+  "sub_areas": ["File zipping", "Moniter Cleaning", "Email writing"],
+  "additional": "I enjoyed it",
+  "capabilities": ["Java", "Python", "Angular"],
+  "outcome": "TBD",
+  "BPM": "123456789"
+}

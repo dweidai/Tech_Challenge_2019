@@ -1,0 +1,16 @@
+<div class='container'>
+
+  <!-- Center box -->
+  <div class="card-body">
+    <!-- Displays the logos -->
+
+    <img id='ge_logo' src='../../assets/images/wabtec_logo.jpg' style='margin-top: 50px;margin-bottom:50px;margin-left: 40px;height:22%;width:80%'>
+
+    <!-- Displays the title, SSO input field, password field -->
+    <h2 style="text-align: center">LEADerboard</h2>
+    <input class="form-control" id='sso' type="text" placeholder="SSO">
+    <input class="form-control" id='password' type="password" placeholder="Password">
+    <!-- Displays the continue button. Calls the function sendSSO when the button is clicked to send the sso to the backend-->
+    <button (click)="sendSSO()" class='btn btn-primary mycustombtn'>Continue</button>
+  </div>
+</div>

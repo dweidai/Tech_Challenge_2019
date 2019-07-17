@@ -1,0 +1,33 @@
+<div class="card float-right col-12 p-0 bigger-box">
+  <div class="card-body d-flex flex-column">
+    <h4 class="subtitle"></h4>
+    <div class="form-group row">
+      <label for="al" class="col-6 col-sm-3 col-form-label">AL Name:</label>
+      <input type="text" class="form-control col-4" id="al" value="{{ rotation.al }}" disabled>
+    </div>
+    <div class="form-group row">
+      <label for="location" class="col-6 col-sm-3">Location:</label>
+      <input type="text" class="form-control col-4" id="location" value="{{ rotation.location }}" disabled>
+    </div>
+    <div class="form-group row">
+      <label for="department" class="col-6 col-sm-3 col-form-label">Department:</label>
+      <input type="text" class="form-control col-4" id="department" value="{{ rotation.department }}" disabled>
+    </div>
+    <div class="form-group row">
+      <label for="pastLEAD" class="col-6 col-sm-3 col-form-label">Past LEAD members:</label>
+      <input type="text" class="form-control col-4" id="pastLEAD" value="{{ rotation.pastLead }}" disabled>
+    </div>
+    <div class="form-group row">
+      <label for="subFunctional" class="col-sm-3 col-form-label">Sub-functional:</label>
+      <input type="text" class="form-control col-4" id="subFunctional" value="{{ rotation.role }}" disabled>
+    </div>
+    <div class="form-group row height-30">
+      <label for="description" class="col-sm-3 col-form-label">Description:</label><br>
+      <textarea class="form-control col-12 col-md-6" name="description" id="description" disabled>{{ rotation.description }}</textarea>
+    </div>
+    <div class="form-group row height-30">
+      <label for="learningOpportunities" class="col-sm-3 col-form-label">Additional learning opportunities:</label><br>
+      <textarea class="form-control col-12 col-md-6" name="learningOpportunities" id="learningOpportunities" rows="7" disabled>{{ rotation.opportunities }}</textarea>
+    </div>
+  </div>
+</div>

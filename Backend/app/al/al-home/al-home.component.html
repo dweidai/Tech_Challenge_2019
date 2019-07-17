@@ -1,0 +1,88 @@
+<div>
+
+    <!-- Header => imported from al-header component -->
+    <app-al-header></app-al-header>
+
+    <div class='content'>
+        <!-- Title -->
+        <div class='title'>Home</div>
+
+        <div class='boxes'>
+
+            <div class='left-box'>
+                <div style='padding: 10px; padding-top: 30px;' class='subTitle'>Current Program Member</div>
+                <div class='subHeader'>
+                    <button class="tabLink" (click)="openTab('first',0)">1st Rotation</button>
+                    <button class="tabLink" (click)="openTab('second',1)">2nd Rotation</button>
+                    <button class="tabLink" (click)="openTab('third',2)">3rd Rotation</button>
+                    <button class="tabLink" (click)="openTab('fourth',3)">4th Rotation</button>
+                </div>
+
+
+                <div id='first' class='tabContent'>
+
+                    <div class='pm-details'>
+
+                        <ul class='list' *ngFor="let person of people">
+                            <div style='display:inline-flex;width:50%'>
+                                <li><img src='../../../assets/images/AL-Home-Picture.png' style='height: 150px'></li>
+                            </div>
+                            <div style='display:inline-block;width:45%'>
+                                <li style='font-weight:600'>{{ current.name }}</li>
+                                <li>{{ current.rolename }}</li>
+                                <li>{{ current.enddate }}</li>
+                            </div>
+                        </ul>
+
+                    </div>
+                    <div class='role-description'>
+                        <div class='text'>Description: </div>
+                        <textarea class="form-control" style = 'width:100%' rows='5' value = '{{ current.description }}' readonly></textarea>
+                    </div>
+                </div>
+
+            
+
+            </div>
+
+            <div style = 'overflow-y:scroll'class='right-top-box'>
+                <h4 class='subTitle'> To-Do List</h4>
+                <!-- List all to do items -->
+                <div class="form-group form-check" *ngFor="let item of toDoItems">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label">{{ item }}</label>
+                </div>
+                <!-- Add a to-do item -->
+                <div style='display:flex'>
+                    <img src='../../../assets/images/PLus.png' style='height: 30px;width:20px'>
+                    <form>
+                        <input type="text" id="todoInput" size="25" placeholder="Add To Do item">
+                    </form>
+                </div>
+                <button style='float:right' type="button" (click)="save_todo_item()"
+                    class="btn btn-outline-secondary">Save</button>
+
+            </div>
+
+            <div class='right-top-box' style='width: 23%'>
+                <h4 class='subTitle'> Timeline</h4>
+
+                <!-- Shows all timeline items -->
+                <div class="form-group form-check" *ngFor="let item of timeline">
+                    <label class="form-check-label">{{ item }}</label>
+                </div>
+            </div>
+
+            <div class='right-bottom-box'>
+                <h4 class='subTitle'> Feedback:</h4>
+                <textarea class="form-control" placeholder = 'Write a note to your BPM' style = 'width:100%' rows='9'></textarea>
+              
+
+                <button style='float:right;' (click)="save_feedback()" class='btn btn-primary mycustombtn'>Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

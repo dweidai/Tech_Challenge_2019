@@ -1,0 +1,36 @@
+<main>
+  <!-- Header -->
+  <app-bpm-header></app-bpm-header>
+
+  <div class="title">Rotation Approval</div>
+
+  <article class="container mx-auto row col-12 half-page">
+
+    <section class="col-12 col-md-6">
+      <div class="card col-12 bigger-box">
+        <div class="p-2 row pb-0 d-flex">
+          <div class="ml-auto">
+            <button class="btn btn-outline-primary btn-ge-outline-blue m-2 mb-0" (click)="saveSubmissions()">Save</button>
+            <button class="btn btn-primary btn-ge-blue m-2 mb-0" (click)="open()">Submit</button>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush ul-submissions">
+          <li *ngFor="let submission of submissions; let i = index" class="list-group-item" [ngClass]="{ 'selected-sub': chosenSubmission === i }" (click)="chosenSubmission = i">
+            <div (click)="onChoose(i)">
+              <input style  = 'margin-top:15px'type="checkbox" class="form-check-input" id="exampleCheck1">
+
+              <small class="float-right">{{ submission.date }}</small>
+              <p class="m-0">{{ submission.name }}</p>
+              <small>{{ submission.step }}</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="col-12 col-md-6 half-page">
+      <app-bpm-approval-card [submission]="selectedSubmission"></app-bpm-approval-card>
+    </section>
+  </article>
+
+</main>

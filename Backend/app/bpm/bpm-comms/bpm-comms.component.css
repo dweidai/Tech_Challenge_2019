@@ -1,0 +1,61 @@
+.title {
+  margin: 1.5%;
+  margin-left: 2.96875%;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: 300px;
+}
+
+.subtitle {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 250px;
+}
+
+.bigger-box {
+  height: 107.3%;
+}
+
+.smaller-box {
+  height: 50%;
+}
+
+li.list-group-item:hover {
+  background-color: rgba(80, 139, 228, 0.15);
+  cursor: pointer;
+}
+
+.ul-submissions {
+  height: 88%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.selected-sub {
+  border-left: 6px solid #508BE4;
+  background-color: rgba(80, 139, 228, 0.15);
+}
+
+li.nav-item {
+  cursor: pointer;
+}

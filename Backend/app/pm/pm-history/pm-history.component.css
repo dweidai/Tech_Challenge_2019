@@ -1,0 +1,102 @@
+
+
+
+.title {
+    margin: 1.5%;
+    margin-left: 2.96875%;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 300px;
+}
+
+.subTitle {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight:400;
+}
+
+.dates {
+   font-size: 15px;
+   font-weight: 250px; 
+}
+
+.text {
+    font-size:15px;
+}
+
+.content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    overflow-y:scroll;
+    display: block;
+    margin: 5%;
+    margin-top: 2%;
+    width: 90%;
+    background-color: #FFFFFF;
+    height: 80%;
+    padding-left: 2.96875%;
+    border: 1px solid #C7D4DD;
+    border-radius: 8px;
+}
+
+
+
+
+/* CSS for left box (viewing program members for each rotation */
+.subHeader {
+    padding-top: 1%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.tabLink {
+    display: inline-block;
+    text-decoration: none;
+    border:none;
+    font-size: 15px;
+    font-weight: 250px;
+    color: black;
+    cursor:pointer;
+    padding: 6px;
+}
+
+.tabContent {
+    display: block;
+}
+
+.tabLink:focus {
+    border: none;
+    outline:0;
+}
+.left{
+    padding-left: 1%;
+    display: inline-block;
+    align-content: center;
+}
+
+.right {
+    display: inline-block;
+    top: 0%;
+ margin-left:100px;
+ padding-top: 0px;
+ width: 60%;
+}
+
+.description {
+    padding: 0px;
+    display:block;
+ 
+}
+
+.list {
+    list-style-type: none;
+    display: block;
+    padding: 0px;
+}
+
