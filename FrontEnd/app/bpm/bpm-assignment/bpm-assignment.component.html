@@ -1,0 +1,135 @@
+<div>
+
+    <!-- Header -->
+    <app-bpm-header></app-bpm-header>
+
+
+    <div class='content'>
+
+        <!-- Main title-->
+        <div class='title'>Role Assignment</div>
+
+        <div class='boxes'>
+
+            <!-- The box that shows the ranking of all program members-->
+            <div class='left-box'>
+                <!-- Prints out each role from Typescript-->
+               
+                <div style='height: 25px;padding: 5px;float:right'>
+                    <button (click)='save_role_member()' class="btn btn-primary btn-ge-blue">Submit</button>
+                </div>
+                <div class='role' *ngFor='let position of positions'>
+
+                    <div class='subTitle' style='padding: 30px;padding-bottom:0px;font-weight:400'>{{ position.name }}</div>
+
+                    <ul class='list'>
+                        <div style='font-size:15px;text-align:center;display:inline-block;width:50%;color:gray'>
+                            <li>NAME</li>
+                        </div>
+                        <div style='font-size:15px;width: 30%;text-align:center;display:inline-block;color:gray'>
+                            <li>RANK</li>
+                        </div>
+                    </ul>
+
+                    <ul class='list' *ngFor='let person of position.program_members'>
+                        <div class = 'pm' id = '{{ person.name }}' (click) = 'select_user(person,position.program_members)'>
+                            <li><input type="checkbox" id="{{ person.name }}">
+                                <label style='width:40%;text-align:center'
+                                    class="form-check-label">{{ person.name }}</label>
+                                <label style='width:46%;text-align:center'
+                                    class="form-check-label">{{ person.rank }}</label>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- Shows the expanded description of the role submission by the AL-->
+            <div class='middle-top-box'>
+                <form>
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-5 col-form-label">Assignment Name:</label>
+                        <div class="col-sm-5">
+                            <input readonly class="form-control input-sm" id="name" value = '{{ selected_pm.rolename }}'> 
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="team" class="col-sm-5 col-form-label">Team Name:</label>
+                        <div class="col-sm-5">
+                            <input readonly class="form-control input-sm" id="team" value = '{{ selected_pm.organization }}'>
+                        </div>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-10 pt-0">Do they have past experience being an AL?
+                            </legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                        value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                        value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        no
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-3 col-form-label">Description:</label>
+                        <div class="col-sm-9">
+                                <textarea class="form-control col-12 col-md-11" name="description" id="description" value = '{{ selected_pm.description }}' disabled></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Show the details of the selected program member -->
+            <div class='middle-bottom-box'>
+                <div class='subHeader'>
+                    <button class="tabLink" (click)="openTab(0)">1st Rotation</button>
+                    <button class="tabLink" (click)="openTab(1)">2nd Rotation</button>
+                    <button class="tabLink" (click)="openTab(2)">3rd Rotation</button>
+                    <button class="tabLink" (click)="openTab(3)">4th Rotation</button>
+                </div>
+
+
+                <div class='tabContent' style='padding: 0px;'>
+                    <ul class='list'>
+                        
+                            <div style='display:inline-block;width: 35%'>
+                                <li><img src = '../../../assets/images/BPM-Rotation-Assignment-Picture.png' style = 'height: 75px'></li>
+                            </div>
+
+                            <div style='display:inline-block;width:45%'>
+                                <li style='font-weight:600'>{{ selected_pm.name }}</li>
+                                <li>{{ selected_pm.rolename }}</li>
+                                <li>{{ selected_pm.organization }}</li>
+                            </div>
+                           
+
+                        
+                    </ul>
+                        <textarea id="expanded_details" value = '{{ selected_pm.description }}'readonly style='width: 99%;height:75%'></textarea>
+                </div>
+            </div>
+
+            <div class = 'right-box'>
+                <div class='subTitle' style='padding-bottom:25px;text-align:center;font-weight:400'>Notes</div>
+
+                <textarea class="form-control" style='width: 99%;height:90%' rows = '6'></textarea>
+
+            </div>
+        </div>
+
+    </div>
+    </div>

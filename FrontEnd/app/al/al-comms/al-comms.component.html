@@ -1,0 +1,163 @@
+<main>
+  <!-- Header -->
+  <app-al-header></app-al-header>
+
+  <div class="title">Communications</div>
+
+  <article class="container mx-auto row col-12">
+
+    <section class="col-12 col-md-6">
+      <div class="card col-12 smaller-box">
+        <div class="card-body d-flex flex-column">
+          <h4 class="subtitle">To Do List</h4>
+
+          <div class="form-group form-check">
+            <div *ngFor="let td of toDo">
+              <input type="checkbox" class="form-check-input">
+              <label class="form-check-label">{{ td }}</label>
+            </div>
+          </div>
+          <div class="mt-auto text-right">
+            <button class="btn btn-outline-primary btn-ge-outline-blue"><span>&#43;</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-5 smaller-box">
+        <div class="card-body">
+          <h4 class="subtitle">Feedback</h4>
+          <form class="d-flex flex-column  height-90">
+            <div class="form-group  height-90">
+              <textarea class="form-control feedback" placeholder = 'Write a note to your BPM' name="feedback" [(ngModel)]="feedback"></textarea>
+            </div>
+            <div class="mt-auto text-right">
+              <button type="submit" class="btn btn-primary btn-ge-blue" [disabled]="form.invalid">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="col-12 col-md-6">
+      <div class="card float-right col-12 p-0 bigger-box">
+        <div class="card-body">
+          <h4 class="subtitle">Survey</h4>
+          <form class="d-flex flex-column" style="height: 95%" (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <div class="form-group row">
+              <label for="pm" class="col-sm-3 col-form-label">Program Member:</label>
+              <select class="form-control col-4" id="pm" name="pm" ngModel required #nameCtrl="ngModel">
+                <option selected></option>
+                <option *ngFor="let pm of pms" value="{{ pm }}">{{ pm }}</option>
+              </select>
+            </div>
+            <div class="form-group row">
+              <label for="department" class="col-sm-3 col-form-label">Department:</label>
+              <select class="form-control col-4" id="department" name="department" ngModel required #nameCtrl="ngModel">
+                <option selected></option>
+                <option value="UX">UX</option>
+                <option value="Shared Services">Shared Services</option>
+                <option value="Finance IT">Finance IT</option>
+                <option value="E Services">E Services</option>
+                <option value="Supply Chain">Supply Chain</option>
+                <option value="Business">Business</option>
+                <option value="Intelligence">Intelligence</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="currentlyWorkingOn">What is your program member currently working on?</label><br>
+              <textarea class="form-control col-12 col-md-6" name="currentlyWorkingOn" id="currentlyWorkingOn" ngModel required #nameCtrl="ngModel"></textarea>
+            </div>
+            <p class="card-text">Please respond to the following statements on a scale of 1-6, with 6 meaning you strongly agree with statment and 1 meaning you strongly disagree:</p>
+            <p class="card-text">My program member is working slower than expected.</p>
+            <div class="flex-row d-flex justify-content-around">
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="firstQuestion" id="inlineRadio1" value="1" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="firstQuestion" id="inlineRadio2" value="2" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="firstQuestion" id="inlineRadio3" value="3" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio3">3</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="firstQuestion" id="inlineRadio4" value="4" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio4">4</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="firstQuestion" id="inlineRadio5" value="5" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio5">5</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="firstQuestion" id="inlineRadio6" value="6" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio6">6</label>
+              </div>
+            </div>
+
+            <p class="card-text">My program member is struggling with the work.</p>
+            <div class="flex-row d-flex justify-content-around">
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="secondQuestion" id="inlineRadio7" value="1" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio7">1</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="secondQuestion" id="inlineRadio8" value="2" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio8">2</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="secondQuestion" id="inlineRadio9" value="3" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio9">3</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="secondQuestion" id="inlineRadio10" value="4" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio10">4</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="secondQuestion" id="inlineRadio11" value="5" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio11">5</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="secondQuestion" id="inlineRadio12" value="6" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio12">6</label>
+              </div>
+            </div>
+
+            <p class="card-text">My program member is actively participating and engaging with the department.</p>
+            <div class="flex-row d-flex justify-content-around">
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="thirdQuestion" id="inlineRadio13" value="1" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio13">1</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="thirdQuestion" id="inlineRadio14" value="2" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio14">2</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="thirdQuestion" id="inlineRadio15" value="3" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio15">3</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="thirdQuestion" id="inlineRadio16" value="4" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio16">4</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="thirdQuestion" id="inlineRadio17" value="5" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio17">5</label>
+              </div>
+              <div class="form-group form-check form-check-inline col-auto">
+                <input class="form-check-input" type="radio" name="thirdQuestion" id="inlineRadio18" value="6" ngModel #nameCtrl="ngModel">
+                <label class="form-check-label" for="inlineRadio18">6</label>
+              </div>
+            </div>
+
+            <div class="mt-auto text-right">
+              <button type="submit" class="btn btn-primary btn-ge-blue" [disabled]="form.invalid">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>

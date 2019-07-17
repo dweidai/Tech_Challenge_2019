@@ -1,0 +1,16 @@
+com/example/demo/BackEndController.class
+com/example/demo/loadINFO.class
+com/example/demo/Member.class
+com/example/demo/Rotation.class
+com/example/demo/AL.class
+com/example/demo/AL_Survey.class
+com/example/demo/Member_Survey.class
+com/example/demo/Preference.class
+com/example/demo/Controller.class
+com/example/demo/User.class
+com/example/demo/BPM.class
+com/example/demo/updateINFO.class
+com/example/demo/Job.class
+com/example/demo/Survey.class
+com/example/demo/Tuple.class
+com/example/demo/BackEndApplication.class

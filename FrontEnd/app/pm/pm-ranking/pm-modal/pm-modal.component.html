@@ -1,0 +1,32 @@
+<div>
+  <div class="modal-body d-flex flex-column overflow-y-auto py-0 mx-auto">
+    <table class="table">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">Rank</th>
+          <th scope="col">Role</th>
+          <th scope="col">Location</th>
+          <th scope="col">Assignment</th>
+          <th scope="col">Department</th>
+        </tr>
+      </thead>
+      <tbody class="rotations-list">
+        <tr *ngFor="let rotation of rotations; let i = index" class="rotation-box text-center">
+          <th scope="row">{{ i + 1 }}</th>
+          <td style="cursor: pointer">{{ rotation.role }}</td>
+          <td style="cursor: pointer">{{ rotation.location }}</td>
+          <td style="cursor: pointer">{{ rotation.al }}</td>
+          <td style="cursor: pointer">{{ rotation.department }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="form-group mt-2">
+      <label for="why" class="col-form-label">Why did you choose to rank these as your top roles?</label><br>
+      <textarea class="form-control" name="why" [(ngModel)]="why"></textarea>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-primary btn-ge-blue" (click)="submitRotation()">Submit</button>
+  </div>
+</div>

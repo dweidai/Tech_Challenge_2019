@@ -1,0 +1,69 @@
+<main>
+  <!-- Header -->
+  <app-bpm-header></app-bpm-header>
+
+  <div class="title">Communications</div>
+
+  <article class="container mx-auto row col-12">
+
+    <section class="col-12 col-md-6">
+      <div class="card col-12 smaller-box">
+        <div class="card-body d-flex flex-column">
+          <h4 class="subtitle">To-Do List</h4>
+
+          <div class="form-group form-check">
+            <div *ngFor="let td of toDo">
+              <input type="checkbox" class="form-check-input">
+              <label class="form-check-label">{{ td }}</label>
+            </div>
+          </div>
+          <div class="mt-auto text-right">
+            <button class="btn btn-outline-primary btn-ge-outline-blue"><span>&#43;</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-5 smaller-box">
+        <div class="card-body">
+          <h4 class="subtitle">Submissions</h4>
+        </div>
+        <ul class="list-group list-group-flush ul-submissions">
+          <li *ngFor="let submission of submissions; let i = index" class="list-group-item" [ngClass]="{ 'selected-sub': chosenSubmission === i }" (click)="chosenSubmission = i">
+            <div>
+              <small class="float-right">{{ submission.date }}</small>
+              <p class="m-0">{{ submission.name }}</p>
+              <small>{{ submission.step }}</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="col-12 col-md-6">
+      <div class="card float-right col-12 p-0 bigger-box">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{ active: chosenTab === 'al survey'}" (click)="chosenTab = 'al survey'">AL Survey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{ active: chosenTab === 'lead survey'}" (click)="chosenTab = 'lead survey'">LEAD Survey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{ active: chosenTab === 'al metrics'}" (click)="chosenTab = 'al metrics'">AL Metrics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{ active: chosenTab === 'lead metrics'}" (click)="chosenTab = 'lead metrics'">LEAD Metrics</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <app-bpm-al-survey *ngIf="chosenTab === 'al survey'"></app-bpm-al-survey>
+          <app-bpm-lead-survey *ngIf="chosenTab === 'lead survey'"></app-bpm-lead-survey>
+          <app-bpm-al-metrics *ngIf="chosenTab === 'al metrics'"></app-bpm-al-metrics>
+          <app-bpm-lead-metrics *ngIf="chosenTab === 'lead metrics'"></app-bpm-lead-metrics>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>

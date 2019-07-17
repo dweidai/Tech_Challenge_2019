@@ -1,0 +1,17 @@
+.custom-header {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 6.25%;
+    margin: 0%;
+    -webkit-box-shadow: 0px 1px 10px 0px #ccc;
+    -moz-box-shadow:    0px 1px 10px 0px #ccc;
+    box-shadow:         0px 1px 10px 0px #ccc;
+}
+
+.header-title {
+    color: black;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+}

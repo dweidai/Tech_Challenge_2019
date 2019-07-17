@@ -1,0 +1,22 @@
+
+---
+- hosts: all
+  tasks:
+  - name: Start the back end
+    volume:
+      - ./home:./home
+    command: java -jar back-end.jar
+  - name: Start the front end
+    image: nginx
+    volume:
+      - 
+    command: service start nginx
+
+services:
+
+  ansible_cmdb:
+    image: registry.gitlab.torq.trans.apps.ge.com/get-devops/docker/ansible_cmdb:latest
+    volumes:
+      - $PWD:/home/user
+      - ./hosts:/etc/ansible/hosts
+      - ~/.ssh:/home/user/.ssh

@@ -1,0 +1,74 @@
+<main>
+  <!-- Header -->
+  <app-pm-header></app-pm-header>
+
+  <div class="title">Rank your rotations</div>
+
+  <article class="container mx-auto row col-12 half-page">
+
+    <section class="col-12 col-md-6">
+      <div class="card col-12 top-box">
+        <div class="p-2 row pb-0 d-flex">
+          <div class="ml-auto">
+            <button class="btn btn-outline-primary btn-ge-outline-blue m-2 mb-0">Show All</button>
+            <button class="btn btn-outline-primary btn-ge-outline-blue m-2 mb-0" (click)="saveRanking()">Save</button>
+            <button class="btn btn-primary btn-ge-blue m-2 mb-0" (click)="open()">Submit</button>
+          </div>
+        </div>
+        <div class="card-body d-flex flex-column overflow-auto py-0">
+            <table class="table">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">Rank</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Assignment</th>
+                  <th scope="col">Department</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody cdkDropList (cdkDropListDropped)="drop($event)" class="rotations-list">
+                <tr *ngFor="let rotation of rotations; let i = index" cdkDrag class="rotation-box text-center">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td (click)="onChoose(i)" style="cursor: pointer">{{ rotation.role }}</td>
+                  <td (click)="onChoose(i)" style="cursor: pointer">{{ rotation.location }}</td>
+                  <td (click)="onChoose(i)" style="cursor: pointer">{{ rotation.al }}</td>
+                  <td (click)="onChoose(i)" style="cursor: pointer">{{ rotation.department }}</td>
+                  <td>
+                    <div class="rotation-handle" cdkDragHandle>
+                      <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                      </svg>
+                    </div>
+                  </td>
+                  <td>
+                    <button type="button" class="close" style="opacity: 1;" (click)="removeRotation(i)">
+                      <span>&times;</span>
+                    </button>
+                  </td>
+                  <div *cdkDragPreview>
+                    <p class="m-4 float-left"><strong>{{ rotation.role }}</strong> in <strong>{{ rotation.location }}</strong> with <strong>{{ rotation.al }}</strong> at <strong>{{ rotation.department }}</strong> department.</p>
+                  </div>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+
+      <div class="card mt-5 bottom-box">
+        <div class="card-body">
+          <h4 class="subtitle">Notes</h4>
+          <div class="form-group height-90">
+            <textarea class="form-control" name="notes" [(ngModel)]="notes"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="col-12 col-md-6 half-page">
+      <app-rotation-card [rotation]="selectedRotation"></app-rotation-card>
+    </section>
+  </article>
+</main>

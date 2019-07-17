@@ -1,0 +1,84 @@
+.title {
+  margin: 1.5%;
+  margin-left: 2.96875%;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: 300px;
+}
+
+.subtitle {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 250px;
+}
+
+.half-page {
+  height: 84vh;
+}
+
+.bigger-box {
+  height: 95.8%;
+}
+
+<<<<<<< HEAD
+.top-box {
+  height: 60%;
+}
+
+.bottom-box {
+  height: 30%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+textarea {
+  height: 90% !important;
+}
+
+.height-90 {
+  height: 90%;
+}
+
+.height-30 {
+  height: 30%;
+}
+
+.selected-sub {
+  border-left: 6px solid #508BE4;
+  background-color: rgba(80, 139, 228, 0.15);
+}
+
+li.nav-item {
+  cursor: pointer;
+}
+
+li.list-group-item:hover {
+  background-color: rgba(80, 139, 228, 0.15);
+  cursor: pointer;
+}
+
+.ul-submissions {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+=======
+>>>>>>> master

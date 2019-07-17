@@ -1,0 +1,113 @@
+<div>
+
+  <!-- Header -->
+  <app-bpm-header></app-bpm-header>
+
+  
+  <div class='content'>
+
+    <!-- Main title-->
+    <div class='title'>Home</div>
+
+    <div class='boxes'>
+
+      <!-- The box that shows which program members are in which rotation-->
+      <div class='left-box'>
+        <div class='subHeader'>
+          <button class="tabLink" (click)="openTab(0)">1st Rotation</button>
+          <button class="tabLink" (click)="openTab(1)">2nd Rotation</button>
+          <button class="tabLink" (click)="openTab(2)">3rd Rotation</button>
+          <button class="tabLink" (click)="openTab(3)">4th Rotation</button>
+        </div>
+
+        <!-- Shows the program members in the first rotation -->
+        <div class='tabContent' style='padding: 0px;'>
+
+          <div class="description">
+            <!-- iterates through all pm of that rotation number -->
+            <div class = 'pm' id = '{{ person.name }}' (click) = showDescription(person) *ngFor="let person of current_pms">
+            <ul class="list-group list-group-horizontal list">
+                <li class="list"><img src = '../../../assets/images/BPM-Home-Picture.png'></li>
+
+                <div style='display:inline-block;padding-left: 50px;width:100%'>
+   
+                <li style='font-weight:600'>{{ person.name }}</li>
+                <li>{{ person.rolename }}</li>
+                <li>{{ person.startdate }}</li>
+              </div> 
+           
+            
+            </ul>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class='right-top-box'  style = 'overflow-y:scroll;'>
+        
+        <h4 class='subTitle'> To-Do List</h4>
+          <!-- List all to do items -->
+          <div class="form-group form-check" *ngFor = "let item of toDoItems">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label">{{ item }}</label>
+          </div>
+          <!-- Add a to-do item -->
+          <div class="form-group row">
+              <label for="todoInput" class="col-sm-1 col-form-label">
+                  <img src = '../../../assets/images/PLus.png' style = 'height: 25px;width:20px'>
+              </label>
+              <div class="col-sm-9">
+                  <input class="form-control input-sm" id="todoInput">
+              </div>
+          </div>
+
+         
+          <button style = 'float:right'type ="button" (click) = "save_todo_item()" class="btn btn-outline-secondary">Save</button>
+
+
+      </div>
+      
+
+      <div class='right-top-box'>
+        <h4 class='subTitle'> Timeline</h4>
+          <!-- Shows all timeline items -->
+          <div class="form-group form-check" *ngFor = "let item of timeline">
+            <label class="form-check-label">{{ item }}</label>
+          </div>
+
+      </div>
+
+      <div class='right-bottom-box'>
+
+          <div style = 'padding-bottom: 25px'>
+              <ul class="list-group list-group-horizontal list">
+                  <li class="list"><img src = '../../../assets/images/BPM-Home-Picture.png'></li>
+  
+                  <div style='display:inline-block;padding-left: 50px;width:100%'>
+     
+                  <li style='font-weight:600'>{{ selected_person.name }}</li>
+                  <li>{{ selected_person.rolename }}</li>
+                  <li>{{ selected_person.startdate }}</li>
+                </div> 
+             
+              
+              </ul>
+
+        </div>
+        <textarea class="form-control" style = 'height:70%;'name="description" id="expanded_details" disabled>{{ selected_person.description }}</textarea>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+ 
+  
+
+
+

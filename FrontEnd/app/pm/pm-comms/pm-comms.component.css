@@ -1,0 +1,49 @@
+.title {
+  margin: 1.5%;
+  margin-left: 2.96875%;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: 300px;
+}
+
+.subtitle {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 250px;
+}
+
+.bigger-box {
+  height: 107.3%;
+}
+
+.smaller-box {
+  height: 50%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.height-90 {
+  height: 90%;
+}
+
+textarea.feedback {
+  height: 100% !important;
+}
