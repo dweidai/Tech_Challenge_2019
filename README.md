@@ -1,5 +1,5 @@
-Application LEADerboard
-This application is used to aid LEAD program members, BPM, and AL in the rotation selection process.
+Application LEADerboard: 
+This application is created to aid LEAD program members, BPM, and AL in the rotation selection process. The goal is to move away from the traditional excel sheets and build an AWS web application to reduce the time spending on selections; thus further improves the efficiency.
 
 Configuration for Development
 1. Git clone `https://github.com/dweidai/Tech_Challenge_2019.git`
